@@ -14,6 +14,8 @@
 		36DB01371F52817800BBA797 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 36DB01351F52817800BBA797 /* LaunchScreen.storyboard */; };
 		36DB01421F52817800BBA797 /* ToastWindowTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB01411F52817800BBA797 /* ToastWindowTests.swift */; };
 		36DB014D1F52817800BBA797 /* ToastWindowUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB014C1F52817800BBA797 /* ToastWindowUITests.swift */; };
+		36DB015B1F52899600BBA797 /* ToastWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB015A1F52899600BBA797 /* ToastWindow.swift */; };
+		36DB015D1F5290B300BBA797 /* Toastable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 36DB015C1F5290B300BBA797 /* Toastable.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +49,8 @@
 		36DB01481F52817800BBA797 /* ToastWindowUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ToastWindowUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		36DB014C1F52817800BBA797 /* ToastWindowUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToastWindowUITests.swift; sourceTree = "<group>"; };
 		36DB014E1F52817800BBA797 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		36DB015A1F52899600BBA797 /* ToastWindow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ToastWindow.swift; sourceTree = "<group>"; };
+		36DB015C1F5290B300BBA797 /* Toastable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Toastable.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +101,14 @@
 		36DB012B1F52817800BBA797 /* ToastWindow */ = {
 			isa = PBXGroup;
 			children = (
+				36DB01381F52817800BBA797 /* Info.plist */,
 				36DB012C1F52817800BBA797 /* AppDelegate.swift */,
+				36DB015C1F5290B300BBA797 /* Toastable.swift */,
+				36DB015A1F52899600BBA797 /* ToastWindow.swift */,
 				36DB012E1F52817800BBA797 /* ViewController.swift */,
-				36DB01301F52817800BBA797 /* Main.storyboard */,
 				36DB01331F52817800BBA797 /* Assets.xcassets */,
 				36DB01351F52817800BBA797 /* LaunchScreen.storyboard */,
-				36DB01381F52817800BBA797 /* Info.plist */,
+				36DB01301F52817800BBA797 /* Main.storyboard */,
 			);
 			path = ToastWindow;
 			sourceTree = "<group>";
@@ -193,6 +199,7 @@
 				TargetAttributes = {
 					36DB01281F52817800BBA797 = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = LDMRJJ9ABC;
 						ProvisioningStyle = Automatic;
 					};
 					36DB013C1F52817800BBA797 = {
@@ -260,7 +267,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				36DB012F1F52817800BBA797 /* ViewController.swift in Sources */,
+				36DB015D1F5290B300BBA797 /* Toastable.swift in Sources */,
 				36DB012D1F52817800BBA797 /* AppDelegate.swift in Sources */,
+				36DB015B1F52899600BBA797 /* ToastWindow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -414,6 +423,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LDMRJJ9ABC;
 				INFOPLIST_FILE = ToastWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vipt.ToastWindow;
@@ -426,6 +436,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LDMRJJ9ABC;
 				INFOPLIST_FILE = ToastWindow/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = net.vipt.ToastWindow;

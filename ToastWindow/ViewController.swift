@@ -8,7 +8,9 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, Toastable {
+    
+    var window: UIWindow!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +21,10 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    @IBAction func buttonTapped(_ sender: UIButton) {
+        showToast(message: "Hello World!", duration: 2.0)
+        performSegue(withIdentifier: "next", sender: nil)
+    }
 }
 
