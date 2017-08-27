@@ -14,7 +14,7 @@ protocol Toastable {
     func showToast(message: String, duration: TimeInterval)
 }
 
-extension Toastable where Self: UIViewController {
+extension Toastable {
     
     func showToast(message: String) {
         self.showToast(message: message, duration: 1.0)
@@ -43,7 +43,7 @@ extension Toastable where Self: UIViewController {
         toast.textColor = .white
         toast.layer.cornerRadius = 22
         toast.layer.masksToBounds = true
-        toast.center = CGPoint(x: self.view.center.x, y: self.view.bounds.height - toast.bounds.height)
+        toast.center = CGPoint(x: UIScreen.main.bounds.width/2, y: UIScreen.main.bounds.height - toast.bounds.height)
         toast.text = message
         return toast
     }
