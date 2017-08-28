@@ -29,10 +29,14 @@ extension Toastable {
         window.addSubview(toast)
         window.makeKeyAndVisible()
         
-        UIView.transition(with: window, duration: duration, options: [.curveLinear, .autoreverse], animations: {
+        UIView.transition(with: window, duration: duration/2, options: [.curveEaseOut], animations: {
             toast.alpha = 1
         }, completion: { finished in
-            objc_setAssociatedObject(self, &toastWindowKey, nil, .OBJC_ASSOCIATION_RETAIN)
+            UIView.transition(with: window, duration: duration/2, options: [.curveEaseIn], animations: {
+                toast.alpha = 0
+            }, completion: { finished in
+                objc_setAssociatedObject(self, &toastWindowKey, nil, .OBJC_ASSOCIATION_RETAIN)
+            })
         })
     }
     
