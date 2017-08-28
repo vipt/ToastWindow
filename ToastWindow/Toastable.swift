@@ -17,7 +17,7 @@ protocol Toastable {
 extension Toastable {
     
     func showToast(message: String) {
-        self.showToast(message: message, duration: 1.0)
+        self.showToast(message: message, duration: 2.0)
     }
 
     func showToast(message: String, duration: TimeInterval) {
